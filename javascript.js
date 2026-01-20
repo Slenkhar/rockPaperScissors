@@ -12,16 +12,15 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let choice = prompt("What will it be, Rock, Paper or Scissors?: ").toLowerCase();
-  if (choice === "rock") {
-    return "rock";
-  } else if (choice === "paper") {
-    return "paper";
-  } else if (choice === "scissors") {
-    return "scissors";
-  }
-  else {
+  if (
+    choice !== "rock" &&
+    choice !== "paper" &&
+    choice !== "scissors"
+  ) {
     console.log(`There's no such thing as ${choice} in Rock Paper Scissors !`);
-    getHumanChoice();
+    return getHumanChoice();
+  } else {
+    return choice;
   }
 }
 
