@@ -1,3 +1,7 @@
+// ::: Rock Paper Scissors Console Game :::
+
+
+// ::: Computer Choice Function :::
 function getComputerChoice() {
   let choice = Math.random();
   if (choice <= 0.33) {
@@ -10,6 +14,8 @@ function getComputerChoice() {
   }
 }
 
+
+// ::: Human Choice Function :::
 function getHumanChoice() {
   let choice = prompt("What will it be, Rock, Paper or Scissors?: ").toLowerCase();
   if (
@@ -24,9 +30,13 @@ function getHumanChoice() {
   }
 }
 
+
+// ::: Score variables :::
 let humanScore = 0;
 let computerScore = 0;
 
+
+// ::: One Game Round function :::
 function playRound(computerChoice, humanChoice) {
   if (computerChoice === "rock"){
     if (humanChoice === "paper"){
@@ -66,6 +76,8 @@ function playRound(computerChoice, humanChoice) {
   }
 }
 
+
+// ::: Multiple Round Function :::
 function playGame() {
   for (let i = 0; i < 5; i++) {
     playRound(getComputerChoice(), getHumanChoice());
